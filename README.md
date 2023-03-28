@@ -105,3 +105,33 @@ list(zip(*e))
 # set
 {abs(i) for i in range(-10, 10)}
 ```
+
+## 函式是種型態
+
+```python
+# 型態 + 操作
+# list + [0]
+# print + (3)
+b = 3
+b = int
+b(4.2)
+def t(digit=0):
+    if digit == 0:
+        return int
+    else:
+        return round
+t(0)(4.6)
+
+# 物件導向也是一樣的道理
+class Person:
+    pass
+class SuperPerson:
+    pass
+
+def t(cond):
+    if cond is True:
+        return Person
+    else:
+        return SuperPerson
+type(t(False)())
+```
