@@ -86,3 +86,13 @@ for i in range(2, len(l)):
     prev2, prev1 = prev1, val
 print(prev1)
 ```
+
+## zip/enumerate/*
+
+```python
+l = ["a", "b", "c"]
+e = list(enumerate(l))
+list(zip([1, 2, 3], [4, 5, 6], [7, 8, 9]))
+# (0, 1, 2), ("a", "b", "c")
+list(zip(*e))
+```
