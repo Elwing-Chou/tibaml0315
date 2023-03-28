@@ -155,6 +155,7 @@ from functools import wraps
 def test(f):
     @wraps(f)
     def wrapper(*args, **kwds):
+        # 替換成你每次都想做的前置工作
         print(f.__name__)
         return f(*args, **kwds)
     return wrapper
