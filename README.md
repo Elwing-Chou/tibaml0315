@@ -135,3 +135,41 @@ def t(cond):
         return SuperPerson
 type(t(False)())
 ```
+
+## decorator基本(定義裝飾)
+
+```python
+def test(f):
+    print(f.__name__)
+    return f
+    
+@test
+def other():
+    return 3
+```
+
+## decorator進階(定義的時候裝飾一個wrap, 你之後每次執行其實就像在執行wrap function)
+
+```python
+from functools import wraps
+def test(f):
+    @wraps(f)
+    def wrapper(*args, **kwds):
+        print(f.__name__)
+        return f(*args, **kwds)
+    return wrapper
+
+# 跑的是
+# test(other) print(other.__name) return other
+@test
+def other():
+    return 3
+
+@test
+def another():
+    return 4
+
+print(other())
+print(other())
+print(another())
+```
