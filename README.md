@@ -96,3 +96,12 @@ list(zip([1, 2, 3], [4, 5, 6], [7, 8, 9]))
 # (0, 1, 2), ("a", "b", "c")
 list(zip(*e))
 ```
+
+## 一氣呵成創建
+
+```python
+# list
+[i ** 2 for i in range(10)]
+# set
+{abs(i) for i in range(-10, 10)}
+```
