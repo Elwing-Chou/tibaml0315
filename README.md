@@ -174,3 +174,14 @@ print(other())
 print(other())
 print(another())
 ```
+
+## Pandas篩選操作
+
+```python
+d = pd.DataFrame([
+    [1, 2],
+    [3, 4],
+    [5, 6]
+])
+d[[True, False, True]]
+```
