@@ -185,3 +185,14 @@ d = pd.DataFrame([
 ])
 d[[True, False, True]]
 ```
+
+## loc/iloc
+
+``python
+d = pd.DataFrame([
+    [1, 2],
+    [3, 4]
+], index=[0, 0])
+d.iloc[0]
+d.loc[0]
+```
